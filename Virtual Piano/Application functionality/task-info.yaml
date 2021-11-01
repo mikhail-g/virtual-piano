@@ -328,6 +328,43 @@ files:
         }
     );
   learner_created: false
+- name: src/style.css
+  visible: true
+  text: |-
+    body {
+        background-color: darkgreen;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightsalmon;
+    }
+
+    kbd {
+        height: 300px;
+        width: 50px;
+        background-color: white;
+        display: inline-block;
+        border: thin solid gray;
+        margin-left: 0;
+        text-align: center;
+        line-height: 500px;
+    }
+  learner_created: true
+- name: src/listeners.js
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/558/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Mon, 01 Nov 2021 17:37:01 UTC
 record: -1
