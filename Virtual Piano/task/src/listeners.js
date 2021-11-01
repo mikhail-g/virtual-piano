@@ -1,27 +1,32 @@
 const keyMsg = (key) => `The '${key}' key is pressed.`;
+const play = (key) => {
+    console.log(keyMsg(key));
+    const audio = new Audio(`./resources/white_keys/${key}.mp3`)
+    audio.play().then(r => r);
+} 
 
 document.addEventListener('keydown', (ev) => {
     switch (ev.code) {
         case "KeyA":
-            console.log(keyMsg('A'));
+            play('A')
             break;
         case "KeyS":
-            console.log(keyMsg('S'));
+            play('S');
             break;
         case "KeyD":
-            console.log(keyMsg('D'));
+            play('D');
             break;
         case "KeyF":
-            console.log(keyMsg('F'));
+            play('F');
             break;
         case "KeyG":
-            console.log(keyMsg('G'));
+            play('G');
             break;
         case "KeyH":
-            console.log(keyMsg('H'));
+            play('H');
             break;
         case "KeyJ":
-            console.log(keyMsg('J'));
+            play('J');
             break;
         default:
             console.log(`The key ${ev.code} is not supported!`);
