@@ -11,17 +11,61 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: lightsalmon;
 }
 
+.white-keys {
+    width: 350px;
+    position: relative;
+    display: flex;
+}
+
+.black-keys {
+    width: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+}
+
 kbd {
-    height: 300px;
-    width: 50px;
-    background-color: white;
     display: inline-block;
-    border: thin solid gray;
     margin-left: 0;
     text-align: center;
+}
+
+.white-keys > kbd {
+    height: 300px;
+    width: 50px;
     line-height: 500px;
+    background-color: white;
+    border: thin solid gray;
+}
+
+.black-keys > kbd {
+    height: 200px;
+    width: 30px;
+    line-height: 300px;
+    color: white;
+    background-color: black;
+    border: thin solid gray;
+}
+
+.white-keys > kbd:active {
+    background-image: linear-gradient(
+            to bottom,
+            white,
+            lightgray
+    );
+}
+
+.black-keys > kbd:active {
+    background-image: linear-gradient(
+            to bottom,
+            black,
+            #505050
+    );
+}
+
+.last-black-key-in-group {
+    margin-right: 50px;
 }

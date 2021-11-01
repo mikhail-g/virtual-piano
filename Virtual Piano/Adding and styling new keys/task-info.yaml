@@ -506,6 +506,55 @@ files:
         }
     );
   learner_created: false
+- name: src/listeners.js
+  visible: true
+  text: "const keyMsg = (key) => `The '${key}' key is pressed.`;\nconst play = (key)\
+    \ => {\n    console.log(keyMsg(key));\n    const audio = new Audio(`./resources/white_keys/${key}.mp3`)\n\
+    \    audio.play().then(r => r);\n} \n\ndocument.addEventListener('keydown', (ev)\
+    \ => {\n    switch (ev.code) {\n        case \"KeyA\":\n            play('A')\n\
+    \            break;\n        case \"KeyS\":\n            play('S');\n        \
+    \    break;\n        case \"KeyD\":\n            play('D');\n            break;\n\
+    \        case \"KeyF\":\n            play('F');\n            break;\n        case\
+    \ \"KeyG\":\n            play('G');\n            break;\n        case \"KeyH\"\
+    :\n            play('H');\n            break;\n        case \"KeyJ\":\n      \
+    \      play('J');\n            break;\n        default:\n            console.log(`The\
+    \ key ${ev.code} is not supported!`);\n    }\n})"
+  learner_created: true
+- name: src/style.css
+  visible: true
+  text: |-
+    body {
+        background-color: darkgreen;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightsalmon;
+    }
+
+    kbd {
+        height: 300px;
+        width: 50px;
+        background-color: white;
+        display: inline-block;
+        border: thin solid gray;
+        margin-left: 0;
+        text-align: center;
+        line-height: 500px;
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/101/stages/560/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">JetBrains
+    Academy</a> to continue learning.
+  time: Mon, 01 Nov 2021 21:18:56 UTC
 record: -1
